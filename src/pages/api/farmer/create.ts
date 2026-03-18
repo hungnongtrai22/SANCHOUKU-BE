@@ -29,6 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       whyTitle,
       whyContent,
       gallery,
+      avatar
     } = req.body;
     const newFarmer = await new Farmer({
       name,
@@ -46,6 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       whyTitle,
       whyContent,
       gallery,
+      avatar
     }).save();
 
     return res.status(200).json({

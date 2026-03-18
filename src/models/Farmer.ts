@@ -36,6 +36,9 @@ const farmerSchema = new mongoose.Schema(
     whyTitle: { type: String },
     whyContent: [],
     gallery: [],
+    avatar: {
+      type: String,
+    },
   },
   {
     timestamps: true,

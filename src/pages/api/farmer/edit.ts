@@ -35,6 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       whyTitle,
       whyContent,
       gallery,
+      avatar
     } = req.body;
 
     if (!_id) {
@@ -59,6 +60,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         whyTitle,
         whyContent,
         gallery,
+        avatar
       },
       { new: true }
     );
