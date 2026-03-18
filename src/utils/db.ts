@@ -1,6 +1,7 @@
+import mongoose, { ConnectionStates } from 'mongoose';
+
 require("node:dns/promises").setServers(["1.1.1.1", "8.8.8.8"]);
 
-import mongoose, { ConnectionStates } from 'mongoose';
 
 interface Connection {
   isConnected?: ConnectionStates;

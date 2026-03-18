@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 // utils
 import cors from 'src/utils/cors';
-import slug from 'slug';
+// import slug from 'slug';
 
 // _mock
 import db from '../../../utils/db';
