@@ -31,13 +31,13 @@ const farmerSchema = new mongoose.Schema(
       type: String,
     },
     category: [],
-    video: { type: String },
+    video: { type: Object },
     popularProduct: [],
     whyTitle: { type: String },
     whyContent: [],
     gallery: [],
     avatar: {
-      type: String,
+      type: Object,
     },
   },
   {
