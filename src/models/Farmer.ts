@@ -7,10 +7,10 @@ const farmerSchema = new mongoose.Schema(
       required: true,
     },
     ward: {
-      type: String,
+      type: Object,
     },
     state: {
-      type: String,
+      type: Object,
     },
     address: {
       type: String,
