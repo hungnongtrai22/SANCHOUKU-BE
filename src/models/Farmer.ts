@@ -39,6 +39,10 @@ const farmerSchema = new mongoose.Schema(
     avatar: {
       type: Object,
     },
+    status: {
+      type: String,
+      default: "active"
+    }
   },
   {
     timestamps: true,
