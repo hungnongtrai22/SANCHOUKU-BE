@@ -6,6 +6,9 @@ const farmerSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    nameJP: {
+      type: String,
+    },
     ward: {
       type: Object,
     },
@@ -21,28 +24,43 @@ const farmerSchema = new mongoose.Schema(
     nameFarm: {
       type: String,
     },
+    nameFarmJP: {
+      type: String,
+    },
     shortIntroduce: {
+      type: String,
+    },
+    shortIntroduceJP: {
       type: String,
     },
     aboutFarmTitle: {
       type: String,
     },
+    aboutFarmTitleJP: {
+      type: String,
+    },
     aboutFarmContent: {
       type: String,
     },
+    aboutFarmContentJP: {
+      type: String,
+    },
     category: [],
+    categoryJP: [],
     video: { type: Object },
     popularProduct: [],
     whyTitle: { type: String },
+    whyTitleJP: { type: String },
     whyContent: [],
+    whyContentJP: [],
     gallery: [],
     avatar: {
       type: Object,
     },
     status: {
       type: String,
-      default: "active"
-    }
+      default: 'active',
+    },
   },
   {
     timestamps: true,
