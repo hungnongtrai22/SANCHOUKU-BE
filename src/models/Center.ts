@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const centerSchema = new mongoose.Schema(
   {
     regulation: {
-      type: String,
+      type: Object,
       // required: true,
     },
   
