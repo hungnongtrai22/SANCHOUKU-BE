@@ -6,7 +6,12 @@ const centerSchema = new mongoose.Schema(
       type: Object,
       // required: true,
     },
-  
+    pgs: {
+      type: Object,
+    },
+    cgap: {
+      type: Object,
+    },
   },
   {
     timestamps: true,

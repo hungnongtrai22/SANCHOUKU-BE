@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     await db.connectDB();
 
-    const { _id, regulation } =
+    const { _id, regulation, pgs, cgap } =
       req.body;
 
     if (!_id) {
@@ -28,7 +28,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const updatedCenter = await Center.findByIdAndUpdate(
       _id,
       {
-       regulation
+       regulation,
+       pgs,
+       cgap
       },
       { new: true }
     );
