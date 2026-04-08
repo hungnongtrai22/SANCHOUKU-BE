@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     await db.connectDB();
 
-    const { _id, name, nameJP, position, positionJP, facebook, line, youtube, instagram } =
+    const { _id, name, nameJP, position, positionJP, facebook, line, youtube, instagram, image } =
       req.body;
 
     if (!_id) {
@@ -36,6 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         line,
         youtube,
         instagram,
+        image
       },
       { new: true }
     );

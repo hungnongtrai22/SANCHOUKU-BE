@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     await db.connectDB();
 
-    const { name, nameJP, position, positionJP, facebook, line, youtube, instagram } = req.body;
+    const { name, nameJP, position, positionJP, facebook, line, youtube, instagram,image } = req.body;
     const newEmployee = await new Employee({
       name,
       nameJP,
@@ -23,6 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       line,
       youtube,
       instagram,
+      image
     }).save();
 
     return res.status(200).json({

@@ -26,6 +26,9 @@ const employeeSchema = new mongoose.Schema(
     },
     instagram: {
       type: String
+    },
+    image: {
+      type: Object
     }
   },
   {
