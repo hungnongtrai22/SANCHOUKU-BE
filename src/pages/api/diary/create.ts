@@ -13,12 +13,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     await db.connectDB();
 
-    const { title, topic, date, detail } = req.body;
+    const { title, topic, date, detail, avatar } = req.body;
     const newDiary = await new Diary({
       title,
       topic,
       date,
       detail,
+      avatar
     }).save();
 
     return res.status(200).json({

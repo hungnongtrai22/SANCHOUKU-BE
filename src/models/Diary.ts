@@ -15,6 +15,9 @@ const diarySchema = new mongoose.Schema(
     detail: {
       type: String,
     },
+    avatar: {
+      type: Object,
+    },
   },
   {
     timestamps: true,
