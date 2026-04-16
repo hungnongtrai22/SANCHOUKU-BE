@@ -6,13 +6,22 @@ const diarySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    titleJP: {
+      type: String,
+    },
     topic: {
+      type: String,
+    },
+      topicJP: {
       type: String,
     },
     date: {
       type: Date,
     },
     detail: {
+      type: String,
+    },
+     detailJP: {
       type: String,
     },
     avatar: {

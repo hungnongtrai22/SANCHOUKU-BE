@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     await db.connectDB();
 
-    const { _id, title, topic, date, detail, avatar } = req.body;
+    const { _id, title, titleJP, topic, topicJP, date, detail, detailJP, avatar } = req.body;
 
     if (!_id) {
       return res.status(400).json({ message: 'Missing diary ID (_id)' });
@@ -28,10 +28,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       _id,
       {
         title,
+        titleJP,
         topic,
+        topicJP,
         date,
         detail,
-        avatar
+        detailJP,
+        avatar,
       },
       { new: true }
     );
