@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await db.connectDB();
 
 
-    const diaries = await Diary.find(); 
+    const diaries = await Diary.find().sort({ createdAt: -1 });
     return res.status(200).json({
       diaries,
     });
