@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     await db.connectDB();
 
-    const { _id, regulation, pgs, cgap } =
+    const { _id, regulation, pgs, cgap, images } =
       req.body;
 
     if (!_id) {
@@ -30,7 +30,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       {
        regulation,
        pgs,
-       cgap
+       cgap,
+       images
       },
       { new: true }
     );

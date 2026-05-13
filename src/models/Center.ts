@@ -12,6 +12,7 @@ const centerSchema = new mongoose.Schema(
     cgap: {
       type: Object,
     },
+    images: [],
   },
   {
     timestamps: true,

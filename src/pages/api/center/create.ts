@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await cors(req, res);
     await db.connectDB();
 
-    const { regulation, pgs, cgap } = req.body;
+    const { regulation, pgs, cgap, images } = req.body;
 
     // tìm center đầu tiên
     let center = await Center.findOne();
@@ -18,6 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       center.regulation = regulation;
       center.pgs = pgs;
       center.cgap = cgap;
+      center.images = images;
       await center.save();
     } else {
       // nếu chưa có → tạo mới
@@ -25,6 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         regulation,
         pgs,
         cgap,
+        images
       }).save();
     }
 
