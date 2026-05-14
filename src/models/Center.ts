@@ -13,6 +13,9 @@ const centerSchema = new mongoose.Schema(
       type: Object,
     },
     images: [],
+    video: {
+      type: String,
+    }
   },
   {
     timestamps: true,
