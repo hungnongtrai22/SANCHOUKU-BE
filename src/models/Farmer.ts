@@ -49,7 +49,6 @@ const farmerSchema = new mongoose.Schema(
     categoryJP: [],
     video: { type: Object },
     popularProduct: [],
-    popularProductJP: [],
     whyTitle: { type: String },
     whyTitleJP: { type: String },
     whyContent: [],
